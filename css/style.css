@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  line-height: 1.5; }
+
+.container {
+  width: 90%;
+  max-width: 110rem;
+  margin: auto; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px 0;
+  font-size: 13px; }
+  .nav .logo {
+    width: 11rem; }
+  .nav ul {
+    display: flex; }
+    @media only screen and (max-width: 43.75rem) {
+      .nav ul .main-menu {
+        margin-right: 5rem; } }
+    @media only screen and (max-width: 43.75rem) {
+      .nav ul .main-menu li:last-child {
+        border-bottom: none; } }
+    @media only screen and (max-width: 43.75rem) {
+      .nav ul .main-menu li {
+        padding: .625rem;
+        border-bottom: #ccc solid 1px;
+        font-size: 14px; } }
+    .nav ul li {
+      padding: 0 1rem; }
+      .nav ul li a {
+        padding-bottom: .2rem; }
+        .nav ul li a:hover {
+          border-bottom: 2px solid #262626; }
+  .nav ul.main-menu {
+    flex: 1;
+    margin-left: 2rem; }
+    @media only screen and (max-width: 43.75rem) {
+      .nav ul.main-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #f2f2f2;
+        width: 50%;
+        height: 100%;
+        border-right: #ccc 1px solid;
+        opacity: 0.9;
+        padding: 3rem;
+        transform: translateX(500px);
+        transition: transform 0.5s ease-in-out; }
+        .nav ul.main-menu li {
+          padding: 1rem;
+          border-bottom: #ccc solid 1px;
+          font-size: 1.4rem; }
+          .nav ul.main-menu li:last-child {
+            border-bottom: 0; }
+        .nav ul.main-menu .nav ul.main-menu.show {
+          transform: translateX(20px); } }
+
+a {
+  color: #262626;
+  text-decoration: none; }
+
+.menu-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  z-index: 2;
+  display: none; }
+  @media only screen and (max-width: 43.75rem) {
+    .menu-btn {
+      display: block; } }
+  .menu-btn:hover {
+    opacity: 0.5; }
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  background: #262626;
+  color: #fff;
+  font-size: 1.5rem; }
+  .btn:hover {
+    opacity: 0.9; }
+
+.dark {
+  color: #fff; }
+  .dark .btn {
+    background: #f4f4f4;
+    color: #333; }
+
+.showcase {
+  width: 100%;
+  height: 40rem;
+  background: url(../img/showcase.jpeg) no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
+  padding-bottom: 5rem;
+  margin-bottom: 2rem; }
+  .showcase h2, .showcase p {
+    margin-bottom: 1rem; }
+  .showcase .btn {
+    margin-bottom: 2rem; }
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 43.75rem) {
+    .home-cards {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 37.5rem) {
+    .home-cards {
+      grid-template-columns: 1fr; } }
+  .home-cards img {
+    width: 100%;
+    margin-bottom: 2rem; }
+  .home-cards h3 {
+    margin-bottom: .5rem; }
+  .home-cards a {
+    display: inline-block;
+    padding-top: 1rem;
+    color: #0067b8;
+    text-transform: uppercase;
+    font-weight: bold; }
+  .home-cards a:hover i {
+    margin-left: 1rem; }
+
+.xbox {
+  width: 100%;
+  height: 35rem;
+  background: url(../img/xbox.png) no-repeat center center/cover;
+  margin-bottom: 4rem; }
+  .xbox .content {
+    width: 40%;
+    padding: 5rem 0 0 3rem; }
+    @media only screen and (max-width: 43.75rem) {
+      .xbox .content h2 {
+        margin-bottom: 2rem; } }
+    @media only screen and (max-width: 43.75rem) {
+      .xbox .content p {
+        display: none; } }
+  .xbox p, .xbox .carbon p {
+    margin: 1rem 0 2rem; }
+
+.carbon {
+  width: 100%;
+  height: 35rem;
+  background: url(../img/carbon.jpg) no-repeat center center/cover; }
+  .carbon .content {
+    width: 55%;
+    padding: 10rem 0 0 3rem; }
+    @media only screen and (max-width: 43.75rem) {
+      .carbon .content {
+        width: 85%; } }
+
+.follow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 3rem 0 3rem; }
+  .follow > * {
+    margin-right: 1rem; }
+
+.links {
+  background: #f2f2f2;
+  color: #61616161;
+  font-size: 1.2rem;
+  padding: 3.5rem 0; }
+  @media only screen and (max-width: 43.75rem) {
+    .links {
+      align-items: center; } }
+  .links-inner {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+    align-items: flex-start;
+    justify-content: center; }
+  @media only screen and (max-width: 43.75rem) {
+    .links .links-inner {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media only screen and (max-width: 37.5rem) {
+    .links .links-inner {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 43.75rem) {
+    .links .links-inner ul {
+      margin-bottom: 2rem; } }
+  @media only screen and (max-width: 37.5rem) {
+    .links .links-inner ul {
+      margin-bottom: 1rem; } }
+  .links li {
+    line-height: 2.8rem; }
+
+.footer {
+  background: #f2f2f2;
+  color: #61616161;
+  font-size: 1.2rem;
+  padding: 2rem 0; }
+  .footer-inner {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0 2rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    @media only screen and (max-width: 43.75rem) {
+      .footer-inner {
+        align-items: center; } }
+  .footer div {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center; }
+    @media only screen and (max-width: 43.75rem) {
+      .footer div {
+        display: block;
+        justify-content: center; } }
+    .footer div i {
+      margin-right: 1rem; }
+  .footer ul {
+    display: flex;
+    flex-wrap: wrap; }
+    @media only screen and (max-width: 43.75rem) {
+      .footer ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); } }
+    @media only screen and (max-width: 37.5rem) {
+      .footer ul {
+        grid-template-columns: repeat(2, 1fr); } }
+  .footer li {
+    margin-right: 3rem;
+    margin-bottom: 2rem; }

@@ -1,0 +1,91 @@
+.links{
+    background: $color-grey-light-1;
+    color: $color-grey-dark-1;
+    font-size: 1.2rem;
+    padding: 3.5rem 0;
+    @media only screen and (max-width: $bp-medium){
+        align-items: center;
+    }
+
+    &-inner{
+        max-width: 110rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1rem;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    & &-inner{
+        @media only screen and (max-width: $bp-medium){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media only screen and (max-width: $bp-small){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        & ul{
+            @media only screen and (max-width: $bp-medium){
+                margin-bottom: 2rem;
+            }
+            @media only screen and (max-width: $bp-small){
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    & li{
+        line-height: 2.8rem;
+    }
+}
+
+.footer{
+    background: $color-grey-light-1;
+    color: $color-grey-dark-1;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    
+    
+    &-inner{
+        max-width: 110rem;
+        margin: 0 auto;
+        padding: 0 2rem 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media only screen and (max-width: $bp-medium){
+            align-items: center;
+        }
+    }
+
+    & div{
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: $bp-medium){
+            display: block;
+            justify-content: center;
+        }
+
+        & i {
+            margin-right: 1rem;
+        }
+    }
+
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        @media only screen and (max-width: $bp-medium){
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media only screen and (max-width: $bp-small){
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    & li{
+        margin-right: 3rem;
+        margin-bottom: 2rem;
+    }
+}

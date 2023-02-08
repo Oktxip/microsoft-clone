@@ -1,0 +1,42 @@
+a{
+    color: $color-grey-dark-3;
+    text-decoration: none;
+}
+.menu-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    z-index: 2;
+    display: none;
+    
+    @media only screen and (max-width: $bp-medium){
+        display: block;
+    }
+    &:hover{
+        opacity: 0.5;
+    }
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    background: $color-grey-dark-3;
+    color: $color-light;
+    font-size: 1.5rem;
+
+    &:hover{
+        opacity: 0.9;
+    }
+}
+
+.dark{
+    color: $color-light;
+
+    & .btn{
+        background: $color-grey-light-2;
+        color: $color-grey-dark-2;
+    }
+}
