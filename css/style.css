@@ -21,6 +21,9 @@ body {
   max-width: 110rem;
   margin: auto; }
 
+.jarak {
+  margin-left: 2rem; }
+
 .nav {
   display: flex;
   align-items: center;
@@ -28,52 +31,57 @@ body {
   height: 60px;
   padding: 20px 0;
   font-size: 13px; }
+  @media screen and (max-width: 43.75rem) {
+    .nav .right-menu {
+      margin-right: 35px; } }
   .nav .logo {
-    width: 11rem; }
-  .nav ul {
-    display: flex; }
-    @media only screen and (max-width: 43.75rem) {
-      .nav ul .main-menu {
-        margin-right: 5rem; } }
-    @media only screen and (max-width: 43.75rem) {
-      .nav ul .main-menu li:last-child {
+    width: 11rem;
+    padding-left: 20px; }
+
+.nav ul {
+  display: flex;
+  padding: 0 1rem; }
+  @media only screen and (max-width: 43.75rem) {
+    .nav ul.main-menu li {
+      margin-right: 5rem;
+      padding: .625rem;
+      border-bottom: #ccc solid 1px;
+      font-size: 14px; }
+      .nav ul.main-menu li:last-child {
         border-bottom: none; } }
-    @media only screen and (max-width: 43.75rem) {
-      .nav ul .main-menu li {
-        padding: .625rem;
+  .nav ul a {
+    padding-bottom: .2rem; }
+    .nav ul a:hover {
+      border-bottom: 2px solid #262626; }
+  @media only screen and (max-width: 43.75rem) {
+    .nav ul:last-child {
+      border-bottom: none; } }
+
+.nav ul.main-menu {
+  flex: 1;
+  margin-left: 2rem; }
+  @media only screen and (max-width: 43.75rem) {
+    .nav ul.main-menu {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #f2f2f2;
+      width: 50%;
+      height: 100%;
+      border-right: #ccc 1px solid;
+      opacity: 0.9;
+      padding: 3rem;
+      transform: translateX(-500px);
+      transition: transform 0.5s ease-in-out; }
+      .nav ul.main-menu.show {
+        transform: translateX(-15px); }
+      .nav ul.main-menu li {
+        padding: 1rem;
         border-bottom: #ccc solid 1px;
-        font-size: 14px; } }
-    .nav ul li {
-      padding: 0 1rem; }
-      .nav ul li a {
-        padding-bottom: .2rem; }
-        .nav ul li a:hover {
-          border-bottom: 2px solid #262626; }
-  .nav ul.main-menu {
-    flex: 1;
-    margin-left: 2rem; }
-    @media only screen and (max-width: 43.75rem) {
-      .nav ul.main-menu {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: #f2f2f2;
-        width: 50%;
-        height: 100%;
-        border-right: #ccc 1px solid;
-        opacity: 0.9;
-        padding: 3rem;
-        transform: translateX(500px);
-        transition: transform 0.5s ease-in-out; }
-        .nav ul.main-menu li {
-          padding: 1rem;
-          border-bottom: #ccc solid 1px;
-          font-size: 1.4rem; }
-          .nav ul.main-menu li:last-child {
-            border-bottom: 0; }
-        .nav ul.main-menu .nav ul.main-menu.show {
-          transform: translateX(20px); } }
+        font-size: 1.4rem; }
+        .nav ul.main-menu li:last-child {
+          border-bottom: none; } }
 
 a {
   color: #262626;
